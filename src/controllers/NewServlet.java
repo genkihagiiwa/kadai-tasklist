@@ -31,12 +31,11 @@ public class NewServlet extends HttpServlet {
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = DBUtil.createEntityManager();
         em.getTransaction().begin();
 
-        // Messageのインスタンスを生成
+        // Taskのインスタンスを生成
         Task t = new Task();
 
         // tの各フィールドにデータを代入
